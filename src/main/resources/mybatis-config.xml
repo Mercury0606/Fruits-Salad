@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd"> 
+<configuration>
+   <settings>
+		<setting name="logImpl" value="LOG4J"/>
+	</settings>
+   <typeAliases>
+         <!-- <package name="com.bean"/> -->
+             
+        <typeAlias alias="Auser" type="com.bean.Auser"/>
+        <typeAlias alias="Goods" type="com.bean.Goods"/>
+        <typeAlias alias="GoodsType" type="com.bean.GoodsType"/>
+        <typeAlias alias="Notice" type="com.bean.Notice"/>
+        <typeAlias alias="Buser" type="com.bean.Buser"/>
+        <typeAlias alias="Order" type="com.bean.Order"/>
+    
+   </typeAliases>
+  <mappers>
+
+        <mapper resource="com/admin/mapper/AdminGoodsMapper.xml"/>
+        <mapper resource="com/admin/mapper/AdminMapper.xml"/>
+        <mapper resource="com/admin/mapper/AdminTypeMapper.xml"/>
+        <mapper resource="com/admin/mapper/AdminNoticeMapper.xml"/>
+        <mapper resource="com/admin/mapper/AdminUserMapper.xml"/>
+       	<mapper resource="com/admin/mapper/AdminOrderMapper.xml"/>
+       	
+        <mapper resource="com/user/mapper/IndexMapper.xml"/>
+        <mapper resource="com/user/mapper/UserMapper.xml"/>
+        <mapper resource="com/user/mapper/CartMapper.xml"/>
+       	<mapper resource="com/user/mapper/OrderMapper.xml"/>
+       	<mapper resource="com/user/mapper/UserCenterMapper.xml"/>
+  </mappers>
+</configuration>
